@@ -1,5 +1,4 @@
 package br.com.ineedsolutions.resource;
-
 import java.util.List;
 
 import javax.json.JsonArray;
@@ -21,9 +20,6 @@ import org.hibernate.Session;
 
 import br.com.ineedsolutions.model.HibernateSession;
 import br.com.ineedsolutions.model.Person;
-
-
-
 
 @Path("person")
 public class PersonResource {
