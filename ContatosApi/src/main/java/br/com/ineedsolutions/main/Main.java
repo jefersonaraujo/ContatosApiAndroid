@@ -6,10 +6,14 @@ import java.net.URI;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
+
 import org.hibernate.Session;
+
+import br.com.ineedsolutions.model.HibernateSession;
 
 public class Main {
 	public static final String BASE_URI ="http://localhost:8080/api/";
+	private Session session = HibernateSession.getSession().openSession();
 	
 	public static HttpServer startServer() {
 		final ResourceConfig rc = new ResourceConfig().packages("br.com.ineedsolutions");
